@@ -110,7 +110,7 @@ class Mounter():
                 print('Unable to find selected')
                 return False
 
-            raw_id = os.popen('diskutil info ' + mnt_pnt).read()
+            raw_id = os.popen('diskutil info ' +'"'+mnt_pnt + '"').read()
             parsed_id = self.__parse_identifier(raw_id)
 
             os.system('sudo diskutil mount '+parsed_id)
