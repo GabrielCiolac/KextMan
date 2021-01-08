@@ -1,4 +1,7 @@
 from mount_parition import Mounter
+from plist_parser import Plist
 
 
-mnt = Mounter()
+plist = Plist('config.plist')
+
+print(plist.get_kext_list())
